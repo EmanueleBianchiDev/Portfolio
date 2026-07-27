@@ -752,3 +752,80 @@ section {
 
 
 }
+
+
+/* =========================
+   MIGLIORAMENTO SEZIONE PROGETTI
+========================= */
+
+
+/* Spazio tra le card */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 35px;
+    margin-top: 35px;
+}
+
+
+
+/* Card progetto */
+
+.card.project {
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+}
+
+
+
+/* Sotto-progetti */
+
+.sub-project {
+
+    margin-top: 25px;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+}
+
+
+
+/* Titoli sotto-progetti */
+
+.sub-project h4 {
+
+    margin-bottom: 12px;
+
+}
+
+
+
+/* Descrizioni */
+
+.sub-project p {
+
+    line-height: 1.6;
+
+}
+
+
+
+/* Pulsanti */
+
+.project-links {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 18px;
+
+}
