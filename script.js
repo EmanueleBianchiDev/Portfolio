@@ -1,6 +1,6 @@
 /* ==================================
    PORTFOLIO EMA
-   JAVASCRIPT DEFINITIVO 1.0
+   JAVASCRIPT DEFINITIVO 2.0
 ================================== */
 
 
@@ -12,48 +12,63 @@
 
 const themeButton = document.getElementById("themeToggle");
 
+
 const savedTheme = localStorage.getItem("theme");
 
 
-// Carica il tema salvato
 
-if (savedTheme === "dark") {
+if(savedTheme === "dark"){
 
     document.body.classList.add("dark-mode");
 
-    themeButton.textContent = "☀️ Tema chiaro";
+
+    if(themeButton){
+
+        themeButton.textContent="☀️ Tema chiaro";
+
+    }
 
 }
 
 
 
 
-themeButton.addEventListener("click", () => {
+
+if(themeButton){
+
+
+themeButton.addEventListener("click",()=>{
 
 
     document.body.classList.toggle("dark-mode");
 
 
-    if(document.body.classList.contains("dark-mode")) {
+
+    if(document.body.classList.contains("dark-mode")){
 
 
         localStorage.setItem("theme","dark");
 
-        themeButton.textContent = "☀️ Tema chiaro";
+
+        themeButton.textContent="☀️ Tema chiaro";
 
 
-    } else {
+    }else{
 
 
         localStorage.setItem("theme","light");
 
-        themeButton.textContent = "🌙 Tema scuro";
+
+        themeButton.textContent="🌙 Tema scuro";
 
 
     }
 
 
 });
+
+
+}
 
 
 
@@ -72,6 +87,7 @@ const sections = document.querySelectorAll("section");
 
 const observer = new IntersectionObserver(
 
+
 (entries)=>{
 
 
@@ -81,9 +97,7 @@ entries.forEach(entry=>{
 if(entry.isIntersecting){
 
 
-    entry.target.style.opacity="1";
-
-    entry.target.style.transform="translateY(0)";
+entry.target.classList.add("show");
 
 
 }
@@ -94,13 +108,16 @@ if(entry.isIntersecting){
 
 },
 
+
 {
 
 threshold:0.15
 
 }
 
+
 );
+
 
 
 
@@ -108,11 +125,7 @@ threshold:0.15
 sections.forEach(section=>{
 
 
-section.style.opacity="0";
-
-section.style.transform="translateY(40px)";
-
-section.style.transition="0.8s";
+section.classList.add("hidden");
 
 
 observer.observe(section);
@@ -126,22 +139,54 @@ observer.observe(section);
 
 
 
+
 // ===============================
 // ANNO AUTOMATICO FOOTER
 // ===============================
 
 
+
 const footerYear = document.querySelector("footer p");
+
 
 
 if(footerYear){
 
 
 footerYear.innerHTML =
-"© " + new Date().getFullYear() + " Emanuele Bianchi";
+
+"© " + new Date().getFullYear()
+
++ " Emanuele Bianchi";
 
 
 }
+
+
+
+
+
+
+
+
+// ===============================
+// VERSIONE PORTFOLIO AUTOMATICA
+// ===============================
+
+
+
+const portfolioVersion = "Portfolio v2.0";
+
+
+const versionElements = document.querySelectorAll(".versione");
+
+
+versionElements.forEach(version=>{
+
+    version.innerHTML = portfolioVersion;
+
+});
+
 
 
 
@@ -154,6 +199,7 @@ footerYear.innerHTML =
 // ===============================
 
 
+
 const socialLinks =
 document.querySelectorAll(".contact-box a");
 
@@ -162,16 +208,18 @@ document.querySelectorAll(".contact-box a");
 socialLinks.forEach(link=>{
 
 
-if(link.getAttribute("href") === "#"){
+if(link.getAttribute("href")==="#"){
 
 
-link.addEventListener("click",(e)=>{
+link.addEventListener("click",(event)=>{
 
 
-e.preventDefault();
+event.preventDefault();
 
 
-alert("Profilo social in aggiornamento");
+alert(
+"Profilo social in aggiornamento"
+);
 
 
 });
@@ -181,3 +229,122 @@ alert("Profilo social in aggiornamento");
 
 
 });
+
+
+
+
+
+
+
+
+// ===============================
+// PULSANTE TORNA SU
+// ===============================
+
+
+
+const topButton = document.createElement("button");
+
+
+topButton.innerHTML="⬆️";
+
+
+topButton.className="top-button";
+
+
+
+document.body.appendChild(topButton);
+
+
+
+
+window.addEventListener("scroll",()=>{
+
+
+if(window.scrollY > 400){
+
+
+topButton.classList.add("visible");
+
+
+}else{
+
+
+topButton.classList.remove("visible");
+
+
+}
+
+
+});
+
+
+
+
+
+topButton.addEventListener("click",()=>{
+
+
+window.scrollTo({
+
+
+top:0,
+
+
+behavior:"smooth"
+
+
+});
+
+
+});
+
+
+
+
+
+
+
+
+// ===============================
+// CARICAMENTO IMMAGINI
+// ===============================
+
+
+
+const images = document.querySelectorAll("img");
+
+
+
+images.forEach(img=>{
+
+
+img.addEventListener("load",()=>{
+
+
+img.classList.add("loaded");
+
+
+});
+
+
+});
+
+
+
+
+
+
+
+
+// ===============================
+// LOG SVILUPPATORE
+// ===============================
+
+
+
+console.log(
+
+"Portfolio Emanuele Bianchi v2.0 caricato correttamente"
+
+);

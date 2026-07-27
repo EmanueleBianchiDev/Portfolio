@@ -1,6 +1,6 @@
 /* ==================================
    PORTFOLIO EMA
-   STYLE DEFINITIVO 1.0
+   STYLE DEFINITIVO 2.0
 ================================== */
 
 
@@ -10,9 +10,9 @@
 
 * {
 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 
 }
 
@@ -20,7 +20,7 @@
 
 html {
 
-    scroll-behavior: smooth;
+    scroll-behavior:smooth;
 
 }
 
@@ -28,15 +28,17 @@ html {
 
 body {
 
-    font-family: 'Poppins', sans-serif;
+    font-family:'Poppins',sans-serif;
 
-    background: #f5f7fb;
+    background:#f5f7fb;
 
-    color: #222;
+    color:#222;
 
-    transition: .4s;
+    transition:.4s;
 
 }
+
+
 
 
 
@@ -45,19 +47,19 @@ body {
 
 header {
 
-    min-height: 90vh;
+    min-height:70vh;
 
-    display: flex;
+    display:flex;
 
-    flex-direction: column;
+    flex-direction:column;
 
-    justify-content: center;
+    justify-content:center;
 
-    align-items: center;
+    align-items:center;
 
-    text-align: center;
+    text-align:center;
 
-    padding: 40px 20px;
+    padding:40px 20px;
 
 
     background:
@@ -71,13 +73,12 @@ header {
 
     color:white;
 
-
 }
 
 
 
-.logo {
 
+.logo {
 
     width:160px;
 
@@ -85,24 +86,42 @@ header {
 
     object-fit:contain;
 
-
     background:white;
 
     padding:15px;
 
-
     border-radius:50%;
 
-
     box-shadow:
-
     0 15px 40px rgba(0,0,0,.3);
 
 
-    animation: float 3s infinite;
-
+    animation:float 3s infinite;
 
 }
+
+
+
+
+.foto-profilo {
+
+    width:170px;
+
+    height:170px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:5px solid white;
+
+    margin-bottom:20px;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.3);
+
+}
+
 
 
 
@@ -116,9 +135,7 @@ header {
 
     }
 
-
 }
-
 
 
 
@@ -154,6 +171,15 @@ header p {
 
 
 
+.versione {
+
+    font-size:.95rem;
+
+    opacity:.9;
+
+}
+
+
 
 
 
@@ -166,33 +192,23 @@ button,
 
     margin-top:25px;
 
-
     padding:14px 30px;
-
 
     border-radius:50px;
 
-
     border:none;
-
 
     background:white;
 
-
     color:#d71920;
-
 
     font-weight:600;
 
-
     cursor:pointer;
-
 
     text-decoration:none;
 
-
     transition:.3s;
-
 
 }
 
@@ -206,7 +222,6 @@ button:hover,
 
 
     box-shadow:
-
     0 10px 25px rgba(0,0,0,.25);
 
 
@@ -216,10 +231,7 @@ button:hover,
 
 
 
-
-
 /* ================= NAV ================= */
-
 
 
 nav {
@@ -246,7 +258,6 @@ nav {
 
 
     box-shadow:
-
     0 5px 20px rgba(0,0,0,.1);
 
 
@@ -260,18 +271,14 @@ nav a {
 
     text-decoration:none;
 
-
     color:#008cff;
 
-
     font-weight:600;
-
 
     transition:.3s;
 
 
 }
-
 
 
 
@@ -287,11 +294,7 @@ nav a:hover {
 
 
 
-
-
-
 /* ================= SECTIONS ================= */
-
 
 
 section {
@@ -304,6 +307,7 @@ section {
 
 
 }
+
 
 
 
@@ -331,22 +335,22 @@ section h2 {
 @keyframes appear {
 
 
-    from {
+from {
 
-        opacity:0;
+    opacity:0;
 
-        transform:translateY(30px);
+    transform:translateY(30px);
 
-    }
+}
 
 
-    to {
+to {
 
-        opacity:1;
+    opacity:1;
 
-        transform:none;
+    transform:none;
 
-    }
+}
 
 
 }
@@ -356,10 +360,7 @@ section h2 {
 
 
 
-
-
 /* ================= CARDS ================= */
-
 
 
 .cards {
@@ -370,14 +371,16 @@ section h2 {
 
     grid-template-columns:
 
-    repeat(auto-fit,minmax(250px,1fr));
+    repeat(auto-fit,minmax(280px,1fr));
 
 
     gap:30px;
 
 
-}
+    margin-top:30px;
 
+
+}
 
 
 
@@ -442,7 +445,6 @@ section h2 {
 
 
 
-
 .card p {
 
 
@@ -452,37 +454,114 @@ section h2 {
 }
 
 
-.sub-project {
-    margin-top: 20px;
-    padding: 15px;
-    border-radius: 15px;
-    background: rgba(0,0,0,0.05);
+
+
+/* ================= PROGETTI ================= */
+
+
+.card.project {
+
+    padding:30px;
+
 }
+
+
+
+.sub-project {
+
+
+    margin-top:25px;
+
+
+    padding:20px;
+
+
+    border-radius:15px;
+
+
+    background:rgba(0,0,0,.05);
+
+
+}
+
+
 
 
 .sub-project h4 {
-    margin-bottom: 10px;
+
+
+    margin-bottom:12px;
+
+
 }
+
+
 
 
 .project-links {
-    display: flex;
-    gap: 10px;
-    margin-top: 15px;
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    flex-wrap:wrap;
+
+
+    gap:12px;
+
+
+    margin-top:18px;
+
+
 }
 
 
-.project-links a {
-    text-decoration: none;
-    padding: 8px 14px;
-    border-radius: 10px;
-    transition: 0.3s;
+
+.project-link {
+
+
+    text-decoration:none;
+
+
+    color:#008cff;
+
+
+    font-weight:600;
+
+
+    transition:.3s;
+
+
 }
 
 
-.project-links a:hover {
-    transform: translateY(-3px);
+
+.project-link:hover {
+
+
+    color:#d71920;
+
+
 }
+
+
+
+
+
+.immagine-progetto {
+
+
+    width:100%;
+
+    border-radius:15px;
+
+    margin-bottom:20px;
+
+}
+
 
 
 
@@ -535,8 +614,6 @@ section h2 {
 
 
 
-
-
 .contact-box p:hover {
 
 
@@ -564,6 +641,25 @@ section h2 {
 
 
 
+
+
+/* ================= IMMAGINI ================= */
+
+
+.section-image {
+
+
+    width:100%;
+
+    max-width:600px;
+
+    display:block;
+
+    margin:30px auto;
+
+    border-radius:20px;
+
+}
 
 
 
@@ -598,18 +694,15 @@ footer {
 /* ================= DARK MODE ================= */
 
 
-
 .dark-mode {
 
 
     background:#111;
 
-
     color:white;
 
 
 }
-
 
 
 
@@ -624,7 +717,6 @@ footer {
 
 
 
-
 .dark-mode nav a {
 
 
@@ -635,18 +727,15 @@ footer {
 
 
 
-
 .dark-mode .card {
 
 
     background:#1e1e1e;
 
-
     color:white;
 
 
 }
-
 
 
 
@@ -658,7 +747,6 @@ footer {
 
 
 }
-
 
 
 
@@ -675,16 +763,10 @@ footer {
 
 
 
-
-
-
-
 /* ================= MOBILE ================= */
 
 
-
 @media(max-width:700px){
-
 
 
 header h1 {
@@ -719,6 +801,7 @@ nav {
 
 
 
+
 section {
 
 
@@ -726,6 +809,7 @@ section {
 
 
 }
+
 
 
 
@@ -739,11 +823,11 @@ section {
 
 
 
+
 .logo {
 
 
     width:120px;
-
 
     height:120px;
 
@@ -751,81 +835,325 @@ section {
 }
 
 
-}
+
+.foto-profilo {
 
 
-/* =========================
-   MIGLIORAMENTO SEZIONE PROGETTI
-========================= */
+    width:130px;
 
+    height:130px;
 
-/* Spazio tra le card */
-
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-    gap: 35px;
-    margin-top: 35px;
-}
-
-
-
-/* Card progetto */
-
-.card.project {
-
-    padding: 30px;
-
-    border-radius: 18px;
 
 }
 
 
+}
 
-/* Sotto-progetti */
+/* ===============================
+   ANIMAZIONE SCROLL JAVASCRIPT
+=============================== */
 
-.sub-project {
 
-    margin-top: 25px;
+.hidden {
 
-    padding: 20px;
+    opacity:0;
 
-    border-radius: 15px;
+    transform:translateY(40px);
+
+    transition:.8s ease;
 
 }
 
 
 
-/* Titoli sotto-progetti */
+.show {
 
-.sub-project h4 {
+    opacity:1;
 
-    margin-bottom: 12px;
-
-}
-
-
-
-/* Descrizioni */
-
-.sub-project p {
-
-    line-height: 1.6;
+    transform:translateY(0);
 
 }
 
 
 
-/* Pulsanti */
 
-.project-links {
 
-    display: flex;
 
-    flex-wrap: wrap;
+/* ===============================
+   PULSANTE TORNA SU
+=============================== */
 
-    gap: 12px;
 
-    margin-top: 18px;
+.top-button {
+
+    position:fixed;
+
+    bottom:30px;
+
+    right:30px;
+
+
+    width:55px;
+
+    height:55px;
+
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+
+    padding:0;
+
+
+    border:none;
+
+    border-radius:50%;
+
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #d71920,
+        #008cff
+    );
+
+
+    color:white;
+
+
+    font-size:28px;
+
+
+    font-weight:700;
+
+
+    line-height:1;
+
+
+    cursor:pointer;
+
+
+    opacity:0;
+
+
+    visibility:hidden;
+
+
+    transition:.3s;
+
+
+    z-index:999;
+
+
+    box-shadow:
+
+    0 10px 30px rgba(0,0,0,.25);
+
+}
+
+
+
+
+.top-button.visible {
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+
+
+
+
+.top-button:hover {
+
+
+    transform:translateY(-7px) scale(1.08);
+
+
+    box-shadow:
+
+    0 15px 35px rgba(0,0,0,.35);
+
+
+}
+
+
+
+
+
+.top-button:focus {
+
+    outline:none;
+
+}
+
+
+
+
+
+/* ===============================
+   IMMAGINI CARICAMENTO
+=============================== */
+
+
+img {
+
+
+    transition:.4s;
+
+
+}
+
+
+
+img.loaded {
+
+
+    animation:imageLoad .6s;
+
+
+}
+
+
+
+@keyframes imageLoad {
+
+
+from {
+
+
+    opacity:0;
+
+
+    transform:scale(.95);
+
+
+}
+
+
+
+to {
+
+
+    opacity:1;
+
+
+    transform:scale(1);
+
+
+}
+
+
+}
+
+/* ===============================
+   MENU NAVIGAZIONE PROGETTI
+=============================== */
+
+
+.project-menu {
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    flex-wrap:wrap;
+
+
+    gap:15px;
+
+
+    margin:40px auto;
+
+
+    padding:0 20px;
+
+
+}
+
+
+
+.project-menu a {
+
+
+    text-decoration:none;
+
+
+    color:#008cff;
+
+
+    background:white;
+
+
+    padding:12px 22px;
+
+
+    border-radius:30px;
+
+
+    font-weight:600;
+
+
+    box-shadow:
+
+    0 8px 20px rgba(0,0,0,.1);
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+.project-menu a:hover {
+
+
+    background:#008cff;
+
+
+    color:white;
+
+
+    transform:translateY(-5px);
+
+
+}
+
+
+
+
+.dark-mode .project-menu a {
+
+
+    background:#1e1e1e;
+
+
+    color:#69c0ff;
+
+
+}
+
+
+
+
+.dark-mode .project-menu a:hover {
+
+
+    background:#008cff;
+
+
+    color:white;
+
 
 }
