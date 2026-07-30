@@ -1,6 +1,6 @@
 /* ==================================
    PORTFOLIO EMA
-   JAVASCRIPT DEFINITIVO 2.1
+   JAVASCRIPT DEFINITIVO 2.2
 ================================== */
 
 // ===============================
@@ -57,27 +57,6 @@ sections.forEach((section) => {
 });
 
 // ===============================
-// ANNO AUTOMATICO FOOTER
-// ===============================
-
-const footerYear = document.querySelector("footer p");
-
-if (footerYear) {
-    footerYear.innerHTML = "© " + new Date().getFullYear() + " Emanuele Bianchi";
-}
-
-// ===============================
-// VERSIONE PORTFOLIO AUTOMATICA
-// ===============================
-
-const portfolioVersion = "Portfolio v2.1";
-const versionElements = document.querySelectorAll(".versione");
-
-versionElements.forEach((version) => {
-    version.innerHTML = portfolioVersion;
-});
-
-// ===============================
 // BLOCCO LINK SOCIAL VUOTI
 // ===============================
 
@@ -129,8 +108,32 @@ images.forEach((img) => {
     });
 });
 
+/* ===============================
+   VERSIONE AUTOMATICA
+=============================== */
+
+const PORTFOLIO_VERSION = "Portfolio v2.2";
+const versionElements = document.querySelectorAll(".versione");
+
+versionElements.forEach((element) => {
+    element.textContent = PORTFOLIO_VERSION;
+});
+
+/* ===============================
+   FOOTER AUTOMATICO
+=============================== */
+
+const footer = document.querySelector("footer");
+
+if (footer) {
+    footer.innerHTML = `
+        <p>© ${new Date().getFullYear()} Emanuele Bianchi</p>
+        <p>${PORTFOLIO_VERSION}</p>
+    `;
+}
+
 // ===============================
 // LOG SVILUPPATORE
 // ===============================
 
-console.log("Portfolio Emanuele Bianchi v2.1 caricato correttamente");
+console.log("Portfolio Emanuele Bianchi v2.2 caricato correttamente");
